@@ -46,14 +46,11 @@ def moveZeroes(nums):
 
 # Ans: 
 def firstUniqChar(s):
-    # Create a hashmap to store character frequencies
     char_freq = {}
 
-    # Populate the hashmap
     for char in s:
         char_freq[char] = char_freq.get(char, 0) + 1
 
-    # Find the first non-repeating character and return its index
     for i in range(len(s)):
         if char_freq[s[i]] == 1:
             return i
